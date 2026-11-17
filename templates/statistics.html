@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="sub-header3">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">MODEL</a></li>
+                    <li><a href="{{ url_for('data') }}">DATA</a></li>
+                    <li><a href="{{ url_for('features') }}">FEATURES</a></li>
+                    <li><a href="{{ url_for('statistics') }}">STATISTICS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>STATISTICS</h1>
+    </section>
+
+    <section class="dash">
+        <img
+            src="{{ url_for('static', filename='images/Churn-1.png') }}"
+            alt="Churn Power BI Dashboard"
+            class="churn-img">
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">MODEL</a></li>
+                    <li><a href="{{ url_for('data') }}">DATA</a></li>
+                    <li><a href="{{ url_for('features') }}">FEATURES</a></li>
+                    <li><a href="{{ url_for('statistics') }}">STATISTICS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>MODEL</h1>
+    </section>
+
+    <section class="info">
+        <h1 class="Info">Info</h1>
+        <p class="Description">
+            This is a Classification Model built using the Keras framework from the TensorFlow library.
+            The model uses the Sequential API and consists of 5 Dense layers with LeakyReLU activations,
+            Batch Normalization, and Dropout regularisation. It has a total of 18 input features including
+            6 engineered features. The model is trained with SMOTE oversampling to handle class imbalance,
+            and uses an optimal threshold of 0.68 for binary classification. The prediction accuracy of the
+            model is found to be 85.35% with an AUC-ROC score of 0.8599, which is a strong result for
+            customer churn prediction.
+        </p>
+
+        <h1 class="Seq">Sequential Model — Architecture</h1>
+        <nav>
+            <a class="neurons" href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/firing_neurons.gif') }}" style="width:300px;">
+            </a>
+        </nav>
+
+        <h1 class="Activation">Activation Functions Used &amp; Confusion Matrix, Report</h1>
+        <nav>
+            <a class="actlogos" href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/SIGMOID.png') }}" alt="Sigmoid">
+                <img src="{{ url_for('static', filename='images/RELU.png') }}" alt="ReLU / LeakyReLU">
+                <img src="{{ url_for('static', filename='images/cmatrix.png') }}" alt="Confusion Matrix">
+                <img src="{{ url_for('static', filename='images/report.png') }}" alt="Classification Report">
+            </a>
+        </nav>
+    </section>
+
+</body>
+</html>

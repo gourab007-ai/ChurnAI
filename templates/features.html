@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="sub-header4">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">MODEL</a></li>
+                    <li><a href="{{ url_for('data') }}">DATA</a></li>
+                    <li><a href="{{ url_for('features') }}">FEATURES</a></li>
+                    <li><a href="{{ url_for('statistics') }}">STATISTICS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>FEATURES</h1>
+    </section>
+
+    <section class="featu">
+        <h1 class="features">Features</h1>
+    </section>
+
+    <section>
+        <nav>
+            <a href="{{ url_for('home') }}">
+                <img class="featlogos" src="{{ url_for('static', filename='images/crscore.png') }}" alt="Credit Score">
+                <img class="featlogos" src="{{ url_for('static', filename='images/geo.png') }}" alt="Geography">
+                <img class="featlogos" src="{{ url_for('static', filename='images/gender.png') }}" alt="Gender">
+                <img class="featlogos" src="{{ url_for('static', filename='images/age.png') }}" alt="Age">
+                <img class="featlogos" src="{{ url_for('static', filename='images/tenure.png') }}" alt="Tenure">
+                <img class="featlogos" src="{{ url_for('static', filename='images/bal.png') }}" alt="Balance">
+                <img class="featlogos" src="{{ url_for('static', filename='images/products.png') }}" alt="Products">
+                <img class="featlogos" src="{{ url_for('static', filename='images/crcard.png') }}" alt="Credit Card">
+                <img class="featlogos" src="{{ url_for('static', filename='images/act.png') }}" alt="Active Member">
+                <img class="featlogos" src="{{ url_for('static', filename='images/sal.png') }}" alt="Salary">
+            </a>
+        </nav>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="sub-header2">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">MODEL</a></li>
+                    <li><a href="{{ url_for('data') }}">DATA</a></li>
+                    <li><a href="{{ url_for('features') }}">FEATURES</a></li>
+                    <li><a href="{{ url_for('statistics') }}">STATISTICS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>DATA</h1>
+    </section>
+
+    <section class="info">
+        <h1 class="dataInfo">About the Data</h1>
+        <p class="dataDescription">
+            The data has been sourced from banks across France, Spain and Germany.
+            The dataset has 14 original features and 10,000 instances, with the target variable
+            being "Exited" (1 = Churned, 0 = Retained). The overall churn rate is approximately 20.4%.
+            6 additional engineered features were added during preprocessing to improve model performance.
+        </p>
+
+        <h1 class="Dataset">Dataset — Head</h1>
+
+        <table cellspacing="0" border="0" class="sortable">
+            <colgroup span="14" width="90"></colgroup>
+            <tr>
+                <td>RowNumber</td>
+                <td>CustomerId</td>
+                <td>Surname</td>
+                <td>CreditScore</td>
+                <td>Geography</td>
+                <td>Gender</td>
+                <td>Age</td>
+                <td>Tenure</td>
+                <td>Balance</td>
+                <td>NumOfProducts</td>
+                <td>HasCrCard</td>
+                <td>IsActiveMember</td>
+                <td>EstimatedSalary</td>
+                <td>Exited</td>
+            </tr>
+            <tr>
+                <td>1</td><td>15634602</td><td>Hargrave</td><td>619</td>
+                <td>France</td><td>Female</td><td>42</td><td>2</td>
+                <td>0</td><td>1</td><td>1</td><td>1</td><td>101348.88</td><td>1</td>
+            </tr>
+            <tr>
+                <td>2</td><td>15647311</td><td>Hill</td><td>608</td>
+                <td>Spain</td><td>Female</td><td>41</td><td>1</td>
+                <td>83807.86</td><td>1</td><td>0</td><td>1</td><td>112542.58</td><td>0</td>
+            </tr>
+            <tr>
+                <td>3</td><td>15619304</td><td>Onio</td><td>502</td>
+                <td>France</td><td>Female</td><td>42</td><td>8</td>
+                <td>159660.80</td><td>3</td><td>1</td><td>0</td><td>113931.57</td><td>1</td>
+            </tr>
+            <tr>
+                <td>4</td><td>15701354</td><td>Boni</td><td>699</td>
+                <td>France</td><td>Female</td><td>39</td><td>1</td>
+                <td>0</td><td>2</td><td>0</td><td>0</td><td>93826.63</td><td>0</td>
+            </tr>
+            <tr>
+                <td>5</td><td>15737888</td><td>Mitchell</td><td>850</td>
+                <td>Spain</td><td>Female</td><td>43</td><td>2</td>
+                <td>125510.82</td><td>1</td><td>1</td><td>1</td><td>79084.10</td><td>0</td>
+            </tr>
+            <tr>
+                <td>6</td><td>15574012</td><td>Chu</td><td>645</td>
+                <td>Spain</td><td>Male</td><td>44</td><td>8</td>
+                <td>113755.78</td><td>2</td><td>1</td><td>0</td><td>149756.71</td><td>1</td>
+            </tr>
+            <tr>
+                <td>7</td><td>15592531</td><td>Bartlett</td><td>822</td>
+                <td>France</td><td>Male</td><td>50</td><td>7</td>
+                <td>0</td><td>2</td><td>1</td><td>1</td><td>10062.80</td><td>0</td>
+            </tr>
+            <tr>
+                <td>8</td><td>15656148</td><td>Obinna</td><td>376</td>
+                <td>Germany</td><td>Female</td><td>29</td><td>4</td>
+                <td>115046.74</td><td>4</td><td>1</td><td>0</td><td>119346.88</td><td>1</td>
+            </tr>
+            <tr>
+                <td>9</td><td>15792365</td><td>He</td><td>501</td>
+                <td>France</td><td>Male</td><td>44</td><td>4</td>
+                <td>142051.07</td><td>2</td><td>0</td><td>1</td><td>74940.50</td><td>0</td>
+            </tr>
+            <tr>
+                <td>10</td><td>15592389</td><td>H?</td><td>684</td>
+                <td>France</td><td>Male</td><td>27</td><td>2</td>
+                <td>134603.88</td><td>1</td><td>1</td><td>1</td><td>71725.73</td><td>0</td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>

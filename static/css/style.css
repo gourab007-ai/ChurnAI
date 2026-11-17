@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ── HOME HEADER ─────────────────────────────────────────── */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(5,2,48,0.7), rgba(4,9,30,0.7));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.back-video {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.back-videoprediction {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* ── NAV ─────────────────────────────────────────────────── */
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    text-align: right;
+    flex: 1;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 4px 10px;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+/* ── HOME TEXT BOX ──────────────────────────────────────── */
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* ── PREDICT TEXT BOX ───────────────────────────────────── */
+.text-boxpred {
+    width: 92%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-boxpred h1 {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.text-boxpred > p {
+    margin: 4px 0 24px;
+    font-size: 14px;
+    color: #fff;
+    padding-top: 0;
+}
+
+/* ── BUTTONS ─────────────────────────────────────────────── */
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.hero-btn:hover {
+    border-color: #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+.hero-btn2 {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-btn2:hover {
+    border-color: #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+/* ── ABOUT SECTION (home) ───────────────────────────────── */
+.About {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+p {
+    font-size: 13px;
+    color: #777;
+    font-weight: 200;
+    line-height: 22px;
+    padding-top: 10px;
+}
+
+.logos {
+    width: 100px;
+    margin: 6px 4px;
+    transition: transform 0.3s;
+}
+
+.logos:hover {
+    transform: scale(1.1);
+}
+
+/* ── SUB HEADERS ─────────────────────────────────────────── */
+.sub-header {
+    height: 28vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.4), rgba(4,9,30,0.4)), url(../images/banner.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.sub-header h1 {
+    font-size: 50px;
+    color: #fff;
+    padding-left: 40px;
+    font-weight: 600;
+}
+
+.sub-header2 {
+    height: 28vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.4), rgba(4,9,30,0.4)), url(../images/banner.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.sub-header2 h1 {
+    font-size: 50px;
+    color: #fff;
+    padding-left: 40px;
+    font-weight: 600;
+}
+
+.sub-header3 {
+    height: 28vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.4), rgba(4,9,30,0.4)), url(../images/banner.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.sub-header3 h1 {
+    font-size: 50px;
+    color: #fff;
+    padding-left: 40px;
+    font-weight: 600;
+}
+
+.sub-header4 {
+    height: 28vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.4), rgba(4,9,30,0.4)), url(../images/banner.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.sub-header4 h1 {
+    font-size: 50px;
+    color: #fff;
+    padding-left: 40px;
+    font-weight: 600;
+}
+
+/* ── MODEL PAGE ──────────────────────────────────────────── */
+.info { padding-bottom: 60px; }
+
+.Info {
+    text-align: center;
+    color: #545452;
+    padding-top: 40px;
+    font-size: 25px;
+}
+
+.Description {
+    font-size: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+    color: #777;
+    line-height: 22px;
+    padding-top: 10px;
+}
+
+.Seq {
+    text-align: center;
+    color: #545452;
+    padding-top: 20px;
+    font-size: 21px;
+}
+
+.Activation {
+    padding-left: 500px;
+    color: #545452;
+    padding-top: 20px;
+    font-size: 21px;
+}
+
+.neurons {
+    width: 300px;
+    padding-left: 550px;
+    display: block;
+    padding-top: 10px;
+}
+
+.actlogos {
+    display: block;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.actlogos img {
+    width: 220px;
+    margin: 10px;
+}
+
+/* ── DATA PAGE ───────────────────────────────────────────── */
+.dataInfo {
+    text-align: left;
+    padding-left: 40px;
+    color: #545452;
+    padding-top: 40px;
+    font-size: 25px;
+}
+
+.dataDescription {
+    font-size: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: left;
+    color: #777;
+    line-height: 22px;
+    padding-top: 10px;
+}
+
+.Dataset {
+    text-align: left;
+    padding-left: 40px;
+    color: #545452;
+    padding-top: 20px;
+    font-size: 21px;
+}
+
+.sortable {
+    margin-left: 80px;
+    padding-top: 15px;
+    border-collapse: collapse;
+    font-size: 12px;
+    padding-bottom: 40px;
+}
+
+.sortable tr:first-child td {
+    background-color: #f44336;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 14px;
+}
+
+.sortable tr:not(:first-child) td {
+    padding: 7px 14px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.sortable tr:not(:first-child):hover {
+    background-color: #fff5f5;
+}
+
+/* ── FEATURES PAGE ───────────────────────────────────────── */
+.featu { padding-bottom: 10px; }
+
+.features {
+    text-align: left;
+    padding-left: 40px;
+    color: #545452;
+    padding-top: 40px;
+    font-size: 25px;
+}
+
+.featlogos {
+    width: 180px;
+    margin: 10px 8px;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.featlogos:hover { transform: scale(1.05); }
+
+/* ── STATISTICS PAGE ─────────────────────────────────────── */
+.dash { padding: 30px 40px 60px; }
+
+.churn {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+.churn-img {
+    width: 100%;
+    border: none;
+    display: block;
+    border-radius: 4px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PREDICT PAGE — 3-COLUMN GRID (exact match to video)
+   ══════════════════════════════════════════════════════════ */
+.predict-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 86%;
+    margin: 0 auto 6px auto;
+    border-left: 1px solid rgba(255,255,255,0.07);
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.predict-grid input[type="text"] {
+    width: 100%;
+    background: rgba(4, 8, 35, 0.52);
+    border: none;
+    border-right: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    outline: none;
+    padding: 13px 15px;
+    font-size: 12px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.3px;
+    box-sizing: border-box;
+    transition: background 0.25s;
+    margin: 0;
+    display: block;
+}
+
+.predict-grid input[type="text"]:focus {
+    background: rgba(15, 25, 70, 0.65);
+}
+
+.predict-grid input[type="text"]::placeholder {
+    color: rgba(255,255,255,0.45);
+    font-size: 11.5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ── PREDICTION OUTPUT (exact from video) ────────────────── */
+.predict-result-text {
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 18px;
+    padding-top: 0;
+    letter-spacing: 0.3px;
+}
+
+.predict-result-text span {
+    color: #f44336;
+    font-weight: 700;
+}
+
+.sug-line {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 8px;
+    padding-top: 0;
+}
+
+.sug {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+}

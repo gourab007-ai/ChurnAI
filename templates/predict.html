@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="header">
+
+        <!-- Neural network particle video background -->
+        <video autoplay loop muted playsinline class="back-videoprediction">
+            <source src="{{ url_for('static', filename='videos/modelvideo.mp4') }}" type="video/mp4">
+        </video>
+
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">MODEL</a></li>
+                    <li><a href="{{ url_for('data') }}">DATA</a></li>
+                    <li><a href="{{ url_for('features') }}">FEATURES</a></li>
+                    <li><a href="{{ url_for('statistics') }}">STATISTICS</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="text-boxpred">
+            <h1>Predict your Customer Class here</h1>
+            <p>Fill the values to predict the class of your Customer</p>
+
+            <!-- ── 3-COLUMN GRID FORM (exact layout from video) ── -->
+            <form action="{{ url_for('predict') }}" method="post">
+                <div class="predict-grid">
+
+                    <!-- Row 1 -->
+                    <input type="text" name="CreditScore"      placeholder="Credit Score"                required/>
+                    <input type="text" name="Gender"           placeholder="Gender (Male : 1, Female:0)"  required/>
+                    <input type="text" name="Age"              placeholder="Age"                          required/>
+
+                    <!-- Row 2 -->
+                    <input type="text" name="Tenure"           placeholder="Tenure"                       required/>
+                    <input type="text" name="Balance"          placeholder="Balance"                      required/>
+                    <input type="text" name="HasCrCard"        placeholder="Having Cr.Card (yes:1, no:0)" required/>
+
+                    <!-- Row 3 -->
+                    <input type="text" name="IsActiveMember"   placeholder="Active Member? (yes:1, no:0)" required/>
+                    <input type="text" name="EstimatedSalary"  placeholder="Salary"                       required/>
+                    <input type="text" name="NumOfProducts_1"  placeholder="One Bank Product? (yes:1, no:0)" required/>
+
+                    <!-- Row 4 -->
+                    <input type="text" name="NumOfProducts_2"  placeholder="Two Bank Products? (yes:1, no:0)"   required/>
+                    <input type="text" name="NumOfProducts_3"  placeholder="Three Bank Products? (yes:1, no:0)" required/>
+                    <input type="text" name="NumOfProducts_4"  placeholder="Four Bank Products? (yes:1, no:0)"  required/>
+
+                    <!-- Row 5 -->
+                    <input type="text" name="Geography_0"      placeholder="Are you from France? (yes:1, no:0)"   required/>
+                    <input type="text" name="Geography_1"      placeholder="Are you from Germany? (yes:1, no:0)"  required/>
+                    <input type="text" name="Geography_3"      placeholder="Are you from Spain? (yes:1, no:0)"    required/>
+
+                </div>
+
+                <br>
+                <button type="submit" class="hero-btn2">Predict</button>
+            </form>
+
+            <br><br>
+
+            <!-- ── OUTPUT (exact text format from video) ── -->
+            {% if predict_text %}
+            <p class="predict-result-text">{{ predict_text | safe }}</p>
+            {% endif %}
+
+            {% if sug_text %}
+            <p class="sug-line">
+                {{ sug_text }} <a class="sug" href="{{ url_for('statistics') }}">Statistics</a>
+            </p>
+            {% endif %}
+
+        </div>
+
+    </section>
+
+    <!-- About section at bottom -->
+    <section class="About">
+        <h1>About</h1>
+        <p>A Complete Machine Learning approach to classify Bank Customers based on the class "Churn".</p>
+        <h2>Tools and Packages Used</h2>
+        <nav>
+            <a href="{{ url_for('home') }}">
+                <img class="logos" src="{{ url_for('static', filename='images/TF.png') }}"          alt="TensorFlow">
+                <img class="logos" src="{{ url_for('static', filename='images/keras.png') }}"       alt="Keras">
+                <img class="logos" src="{{ url_for('static', filename='images/scikit.png') }}"      alt="Scikit-learn">
+                <img class="logos" src="{{ url_for('static', filename='images/numpy.png') }}"       alt="NumPy">
+                <img class="logos" src="{{ url_for('static', filename='images/pandas.png') }}"      alt="Pandas">
+                <img class="logos" src="{{ url_for('static', filename='images/python.png') }}"      alt="Python">
+                <img class="logos" src="{{ url_for('static', filename='images/seaborn.png') }}"     alt="Seaborn">
+                <img class="logos" src="{{ url_for('static', filename='images/matplotlib.png') }}"  alt="Matplotlib">
+                <img class="logos" src="{{ url_for('static', filename='images/PowerBI.png') }}"     alt="Power BI">
+                <img class="logos" src="{{ url_for('static', filename='images/flask.png') }}"       alt="Flask">
+            </a>
+        </nav>
+    </section>
+
+</body>
+</html>
